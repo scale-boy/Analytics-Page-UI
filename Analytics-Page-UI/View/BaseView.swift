@@ -39,17 +39,59 @@ struct BaseView: View {
             }
             
             // Custom Tab bar ...
-            HStack(spacing: 40) {
+            HStack(spacing: 30) {
+                
+                Spacer(minLength: 20)
                 
                 // Tab Buttons ...
+                TabButton(image: "home")
+                TabButton(image: "graph")
                 
+                // Center Button
+                Button {
+                    
+                } label: {
+                    Image(systemName: "plus")
+                        .font(.system(size: 20, weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(22)
+                        .background(
+                            Circle()
+                                .fill(Color.blue)
+                                .shadow(color: Color.blue.opacity(0.15), radius: 5, x: 0, y: 8)
+                            
+                        )
+                }
+                .offset(y: -20)
+                .padding(.vertical, -15)
+
+                
+                TabButton(image: "chat")
+                TabButton(image: "settings")
+                
+                Spacer(minLength: 20)
             }
+            
         }
         
     }
     
     @ViewBuilder
-    func 
+    func TabButton(image: String) -> some View {
+        Button {
+            withAnimation {
+                currentTab = image
+            }
+        } label: {
+            Image(image)
+                .resizable()
+                .renderingMode(.template)
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(
+                    currentTab == image ? Color.black : Color.gray.opacity(0.8)
+                )
+        }
+    }
     
 }
 

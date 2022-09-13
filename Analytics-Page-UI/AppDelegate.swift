@@ -3,7 +3,7 @@
 //  Analytics-Page-UI
 //
 //  Created by nguyen.van.thuanc on 13/09/2022.
-//  https://www.youtube.com/watch?v=w7ZOxf2Hve4
+//  https://www.youtube.com/watch?v=w7ZOxf2Hve4 - 3p43
 
 import UIKit
 
