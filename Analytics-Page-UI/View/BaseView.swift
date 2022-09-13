@@ -24,16 +24,20 @@ struct BaseView: View {
             // Tab View ...
             TabView(selection: $currentTab) {
                 
-                Text("Home")
+                Home()
+                    .modifier(BGModifier())
                     .tag("home")
                 
                 Text("Graph")
+                    .modifier(BGModifier())
                     .tag("graph")
                 
                 Text("Chat")
+                    .modifier(BGModifier())
                     .tag("chat")
                 
                 Text("Settings")
+                    .modifier(BGModifier())
                     .tag("settings")
                 
             }
@@ -57,8 +61,8 @@ struct BaseView: View {
                         .padding(22)
                         .background(
                             Circle()
-                                .fill(Color.blue)
-                                .shadow(color: Color.blue.opacity(0.15), radius: 5, x: 0, y: 8)
+                                .fill(Color("Plus"))
+                                .shadow(color: Color("Plus").opacity(0.15), radius: 5, x: 0, y: 8)
                             
                         )
                 }
@@ -71,9 +75,12 @@ struct BaseView: View {
                 
                 Spacer(minLength: 20)
             }
-            
+            .padding(.top, 10)
+            .background(
+                Color("BG")
+                    .ignoresSafeArea()
+            )
         }
-        
     }
     
     @ViewBuilder
@@ -93,6 +100,14 @@ struct BaseView: View {
         }
     }
     
+}
+
+struct BGModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color("BG").ignoresSafeArea())
+    }
 }
 
 struct BaseView_Previews: PreviewProvider {

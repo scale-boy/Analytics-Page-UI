@@ -13,6 +13,9 @@
 		C27291CC28D05A1D00FD6EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C27291CA28D05A1D00FD6EA3 /* LaunchScreen.storyboard */; };
 		C27291DA28D064E600FD6EA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27291D928D064E600FD6EA3 /* ContentView.swift */; };
 		C27291DE28D0650800FD6EA3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27291DD28D0650800FD6EA3 /* BaseView.swift */; };
+		EC844C6728D0BD7D008105A1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC844C6628D0BD7D008105A1 /* Home.swift */; };
+		EC844C6D28D0C97F008105A1 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC844C6C28D0C97F008105A1 /* Download.swift */; };
+		EC844C7028D0C9D1008105A1 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC844C6F28D0C9D1008105A1 /* BarGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		C27291CD28D05A1D00FD6EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C27291D928D064E600FD6EA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C27291DD28D0650800FD6EA3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		EC844C6628D0BD7D008105A1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		EC844C6C28D0C97F008105A1 /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		EC844C6F28D0C9D1008105A1 /* BarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,7 @@
 		C27291BE28D05A1C00FD6EA3 /* Analytics-Page-UI */ = {
 			isa = PBXGroup;
 			children = (
-				C27291DC28D064F800FD6EA3 /* ViewModel */,
+				EC844C6B28D0C975008105A1 /* Model */,
 				C27291DB28D064F400FD6EA3 /* View */,
 				C27291BF28D05A1C00FD6EA3 /* AppDelegate.swift */,
 				C27291C128D05A1C00FD6EA3 /* SceneDelegate.swift */,
@@ -72,15 +78,26 @@
 			isa = PBXGroup;
 			children = (
 				C27291DD28D0650800FD6EA3 /* BaseView.swift */,
+				EC844C6828D0C7A5008105A1 /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		C27291DC28D064F800FD6EA3 /* ViewModel */ = {
+		EC844C6828D0C7A5008105A1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EC844C6628D0BD7D008105A1 /* Home.swift */,
+				EC844C6F28D0C9D1008105A1 /* BarGraph.swift */,
 			);
-			path = ViewModel;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EC844C6B28D0C975008105A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC844C6C28D0C97F008105A1 /* Download.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +172,11 @@
 			files = (
 				C27291C028D05A1C00FD6EA3 /* AppDelegate.swift in Sources */,
 				C27291C228D05A1C00FD6EA3 /* SceneDelegate.swift in Sources */,
+				EC844C6728D0BD7D008105A1 /* Home.swift in Sources */,
+				EC844C6D28D0C97F008105A1 /* Download.swift in Sources */,
 				C27291DA28D064E600FD6EA3 /* ContentView.swift in Sources */,
 				C27291DE28D0650800FD6EA3 /* BaseView.swift in Sources */,
+				EC844C7028D0C9D1008105A1 /* BarGraph.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +315,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 76KWD8V4F5;
+				DEVELOPMENT_TEAM = 7X6CSKVAS2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Analytics-Page-UI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -322,7 +342,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 76KWD8V4F5;
+				DEVELOPMENT_TEAM = 7X6CSKVAS2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Analytics-Page-UI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
